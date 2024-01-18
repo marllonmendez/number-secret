@@ -1,6 +1,7 @@
 function displayText(tag, text) {
     let field = document.querySelector(tag);
     field.innerHTML = text;
+    responsiveVoice.speak(text, 'Brazilian Portuguese Female', {rate:1.2});
 }
 
 function displayTextDefault () {
@@ -12,11 +13,24 @@ function displayTextDefault () {
 displayTextDefault();
 
 let input = document.querySelector('input');
+let numberList = [];
+let maxNumber = 10;
 let numberSecret = numberRamdom();
 let attempt = 1;
 
 function numberRamdom() {
-    return Math.floor(Math.random() * 10);
+    let numberSelected = Math.floor(Math.random() * maxNumber);
+    let amountNumbers = numberList.length
+    if (amountNumbers === maxNumber) {
+        numberList = [];
+    }
+    if (numberList.includes(numberSelected)) {
+        return numberRamdom();
+    } else {
+        numberList.push(numberSelected)
+        return numberSelected;
+    }
+
 }
 
 function verificationNumber() {
