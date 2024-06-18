@@ -25,7 +25,7 @@ O [Oracle Next Education](https://www.oracle.com/br/education/oracle-next-educat
 
 ## Como usar
 
-- Acesse o site [Número Secreto](https://marllonmendez.github.io/numberSecret/)
+- Acesse o site [Número Secreto](https://marllonmendez.github.io/number-secret/)
 
 ## Licença
 
